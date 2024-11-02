@@ -1,0 +1,42 @@
+{
+  "cohorts": [
+    {
+      "id": 101,
+      "cohortSize": 26,
+      "cohortVenueId": 0,
+      "cohortStack": "Java Full Stack",
+      "cohortStartDate": "2024-12-12",
+      "cohortDurationWeeks": 6,
+      "cohortSPOC": "",
+      "cohortInstructor": ""
+    },
+    {
+      "id": 201,
+      "cohortSize": 30,
+      "cohortVenueId": 101,
+      "cohortStack": "Python Full Stack",
+      "cohortStartDate": "2024-12-12",
+      "cohortDurationWeeks": 6,
+      "cohortSPOC": "",
+      "cohortInstructor": ""
+    }
+  ],
+  "venues": [
+    {
+      "id": 101,
+      "venueName": "Pallavas",
+      "venueSeater": 30,
+      "isVenueAC": true,
+      "venueCity": "Trivandrum",
+      "venueState": "Kerala"
+    },
+    {
+      "id": 102,
+      "venueName": "Cholans",
+      "venueSeater": 30,
+      "isVenueAC": true,
+      "venueCity": "Trivandrum",
+      "venueState": "Kerala"
+    }
+  ]
+}
