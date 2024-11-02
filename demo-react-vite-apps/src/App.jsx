@@ -42,7 +42,7 @@ function App() {
         <Route path='venue-list' element={<VenueList/>}></Route>
         <Route path='cohort-list' element={<CohortList/>}></Route>
         <Route path='cohort-add' element={<CohortAdd/>}></Route>
-        <Route path='cohort-view/:cohortid' element={<CohortView/>}></Route>
+        <Route path='cohort-view/:id' element={<CohortView/>}></Route>
       </Route>
     </Routes>
     </BrowserRouter>

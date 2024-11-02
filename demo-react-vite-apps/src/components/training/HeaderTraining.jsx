@@ -27,11 +27,6 @@ function HeaderTraining() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/training/cohort-view/:cohortid" className="nav-link">
-                VIEW LIST
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link to="/JsonPlaceholder" className="nav-link">
                 Fake API
               </Link>

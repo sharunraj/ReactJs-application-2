@@ -1,18 +1,24 @@
 // CohortList.jsx
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import CohortAdd from "./CohortAdd";
 import CohortData from "./CohortData"; // Import CohortData
 import { Link } from "react-router-dom";
-
+import { Navigate } from "react-router-dom";
 function CohortList() {
   const [allCohorts, setAllCohorts] = useState([]);
-  useEffect(() => {
+  const navigate = useNavigate();
+  function LoadAllCohorts() {
     fetch("http://localhost:3000/cohorts")
       .then((response) => response.json())
       .then((data) => {
         setAllCohorts(data);
       })
       .catch((error) => console.error("Error fetching cohorts:", error));
+  }
+
+  useEffect(() => {
+    LoadAllCohorts();
   }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -116,10 +122,8 @@ function CohortList() {
   function handleEdit() {}
 
   function handleView(id) {
-    let getCohort = allCohorts.filter((eachCohort) => eachCohort.id == id);
-    // navigate to another component with route path /training/cohort-view
-    // here we have to use programatic navigation with the help of useNavigate() hook
-    navigate("/training/cohort-view/" + id, { state: getCohort[0] });
+    console.log(id);
+    navigate("/training/cohort-view/" + id);
   }
   function handleDelete(id) {
     const filteredData = allCohorts.filter(
